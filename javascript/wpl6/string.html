@@ -1,0 +1,70 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stringfunctions</title>
+
+</head>
+
+<body style="background-color: wheat;">   <div>
+    <center><h2 style="background-color:aliceblue; font-style: italic;background-size: 50px;font: size 50px;"> String Functions </h2></center> 
+ 
+    <table>
+        <tbody>
+            <tr>
+                <th>Enter a text</th>
+                <td> <input type="text" id="input_srting" name="input_s"></td>
+            </tr>
+            <tr>
+                <th>Slice start</th>
+                <td><input type="text" id="slice_s" name="slice_s"></td>
+            </tr>
+            <tr>
+                <th>Slice end</th>
+                <td><input type="text" id="slice_e" name="slice_e"></td>
+            </tr>
+            <tr>
+                <th>Replace the word</th>
+                <td><input type="text" id="replace_f"></td>
+            </tr>
+            <tr>
+                <th>Replace with</th>
+                <td><input type="text" id="replace_s"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br><br><br><br>
+    <center><input style="align-content: center;align-items: center;background-color: slategray;width: 150px;height: 50px;border-radius: 15px;box-shadow: 20px;font-weight:bolder;font-size: large;" type="button" value="Generate" class="selector" onclick="string_func()"></center>
+
+    <br><br>
+    <ul id="output"> </ul>
+</div>
+<script>
+    function string_func() {
+        let input = document.getElementById('input_srting').value;
+        
+        let slice_s = document.getElementById('slice_s').value;
+        let slice_e = document.getElementById('slice_e').value;
+        let replace_f = document.getElementById('replace_f').value;
+        let replace_s = document.getElementById('replace_s').value;
+
+
+        let li_O = '<li>';
+        let li_C = '</li>';
+        let list_items='';
+        list_items += li_O + 'Length of string is  : ' + input.length + li_C;
+        list_items += li_O + 'Trimmed string is : "' + input.trim() + '"' + li_C;
+        list_items += li_O + 'Uppercase  :  ' + input.toUpperCase() + li_C;
+        list_items += li_O + 'Lowercase  :  ' + input.toLowerCase() + li_C;
+        list_items += li_O + 'Slice[' + slice_s + ' : ] is ' + input.slice(slice_s) + li_C;
+        list_items += li_O + 'Slice[' + slice_s + ' : ' + slice_e + '] is ' + input.slice(slice_s, slice_e) + li_C;
+        list_items += li_O + 'Substring[' + slice_s + ' : ' + slice_e + ']  is ' + input.substring(slice_s, slice_e) + li_C;
+        list_items += li_O + 'Replace ' + replace_f + ' with ' + replace_s + ' is ' + input.replace(replace_f, replace_s) + li_C;
+        document.getElementById('output').innerHTML = (list_items);
+    }
+</script>
+</body>
+
+</html>

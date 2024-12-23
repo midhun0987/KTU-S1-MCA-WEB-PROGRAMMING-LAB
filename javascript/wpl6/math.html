@@ -1,0 +1,60 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> String and Math functions </title>
+    <style>
+   
+    </style>
+</head>
+
+<body style="background-color: wheat;"> 
+  <div>
+  <h2 style="background-color:aliceblue; font-size: xx-large; font-style: italic;background-size: 50px;font: size 50px;text-align: center;"> Math Functions </h2>
+  <table style="padding: 30px;padding-top: 15px;">
+      <tbody>
+          <tr>
+              <th style="font-size: large;"> Enter a Number </th>
+              <td> <input style="text-align: center;" type="text" id="input_num" placeholder="Enter The value"></td>
+          </tr>
+          
+      </tbody>
+  </table>
+
+  <br><br><br><br><br>
+ <center> <input style="width: 100px; background-color: slategray ;width: 150px; height: 50px; border-radius: 15px;font-weight: bolder;font-size: large;box-shadow: 20px;" type="button" value="Generate" class="selector" onclick="math_func()"></center>
+
+  <br><br>
+  <ul id="output_math"> </ul>
+</div>
+<script>
+    
+        function math_func() {
+            let input = parseFloat(document.getElementById('input_num').value); // Convert input to a number
+            let li_O = '<li>';
+            let li_C = '</li>';
+            let list_item1 = ''; // Declare the variable here
+
+            // Check if the input is a number
+            if (isNaN(input)) {
+                alert("Please enter a valid number.");
+                return;
+            }
+
+            list_item1 += li_O + 'Round of ' + input + ' is: ' + Math.round(input) + li_C;
+            list_item1 += li_O + 'Ceil value of ' + input + ' is: ' + Math.ceil(input) + li_C;
+            list_item1 += li_O + 'Floor value of ' + input + ' is: ' + Math.floor(input) + li_C;
+            list_item1 += li_O + 'Square root of ' + input + ' is: ' + Math.sqrt(input) + li_C;
+            list_item1 += li_O + 'Absolute value of ' + input + ' is: ' + Math.abs(input) + li_C;
+            list_item1 += li_O + 'Square of ' + input + ' is: ' + Math.pow(input, 2) + li_C; // Square
+            list_item1 += li_O + 'A Random number is: ' + Math.random() + li_C;
+
+            document.getElementById('output_math').innerHTML = list_item1; // Use the correct variable name
+        }
+    
+
+</script>
+</body>
+
+</html>

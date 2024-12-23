@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Hover to Replace Image and Text</title>
+    <style>
+
+        #content {
+            width: 500px;
+            height: 500px;
+            margin: 50px auto;
+            text-align: center;
+            background-color:lightyellow;
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 20px;
+           position: relative;
+        }
+
+
+        #originalImage {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 8px;
+		margin-top: 10px;
+
+
+        }
+
+        #originalText {
+            font-size: 18px;
+            color: #495057;
+            margin-top: 10px;
+        }
+
+
+        #newContent {
+            position: absolute; 
+            top: 20px;
+            text-align: center;
+            display: none; 
+        }
+
+        #newContent img {
+       
+            width: 100%;
+            height: 300px;
+            border-radius: 8px;
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    
+    <div id="content">
+ 
+        <img id="originalImage" src="https://static.vecteezy.com/system/resources/thumbnails/030/355/618/small_2x/flowers-in-the-field-mountains-flowers-nature-nature-hd-wallpaper-ai-generated-free-photo.jpg" alt="Original Image">
+        <h1 id="originalText">ORIGINAL IMAGE!</h1>
+        <h3>Hover over the box</h3>
+
+        <div id="newContent">
+            <img src="https://t3.ftcdn.net/jpg/05/35/47/38/360_F_535473874_OWCa2ohzXXNZgqnlzF9QETsnbrSO9pFS.jpg" alt="New Image">
+            <h1>NEW IMAGE!</h1>
+        </div>
+    </div>
+
+    <script>
+
+        const content = document.getElementById("content");
+        const originalImage = document.getElementById("originalImage");
+        const originalText = document.getElementById("originalText");
+        const newContent = document.getElementById("newContent");
+
+       
+        content.addEventListener("mouseover", function() {
+       
+            originalImage.style.display = "none";
+            originalText.style.display = "none";
+            newContent.style.display = "block";
+        });
+
+
+        content.addEventListener("mouseout", function() {
+            originalImage.style.display = "block";
+            originalText.style.display = "block";
+            newContent.style.display = "none";
+        });
+    </script>
+
+</body>
+</html>
