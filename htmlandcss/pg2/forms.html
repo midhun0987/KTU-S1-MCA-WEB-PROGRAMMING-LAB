@@ -1,0 +1,75 @@
+<html> 
+<head> 
+<title>MCA Admission Form</title> 
+</head> 
+<body> 
+<h2 align="center">MCA Admission Form</h2> 
+<form> 
+<table align="center" border="0" cellpadding="8"> 
+<tr> 
+<td><label for="fullName">Full Name:</label></td> 
+<td><input type="text" id="fullName" name="fullName"  
+required></td> 
+</tr> 
+<tr> 
+<td><label for="email">Email Address:</label></td> 
+<td><input type="email" id="email" name="email" required></td> 
+</tr> 
+<tr> 
+<td><label for="phone">Phone Number:</label></td> 
+<td><input type="number" id="phone" name="phone" required></td> 
+</tr> 
+<tr> 
+<td><label for="degree">Undergraduate Degree:</label></td> 
+<td><input type="text" id="degree" name="degree" required></td> 
+</tr> 
+<tr> 
+<td><label for="year">Year of Passing:</label></td> 
+<td><input type="date" id="university" name="university"  
+required></td> 
+</tr> 
+<tr> 
+<td><label for="gender">Gender:</label></td> 
+<td> 
+<select id="gender" name="gender" required> 
+<option value="">Select</option> 
+<option value="male">Male</option> 
+<option value="female">Female</option> 
+<option value="other">Other</option> 
+</select> 
+</td> 
+</tr> 
+<tr> 
+<td><label for="address">Address:</label></td> 
+<td><textarea id="address" name="address" rows="4"  
+required></textarea></td> 
+</tr> 
+<tr> 
+<td><label for="photo">Upload Your Photo:</label></td> 
+<td><input type="file" id="photo" name="photo" accept="image/*"  
+required></td> 
+</tr> 
+<tr> 
+<td><label for="documents">Upload Supporting  
+Documents:</label></td> 
+<td><input type="file" id="documents" name="documents[]"  
+accept=".pdf,.doc,.docx" multiple required></td> 
+</tr> 
+<tr> 
+<td colspan="2"> 
+<input type="checkbox" name="declaration" required> 
+<label for="declaration"> I hereby declare that the information  
+provided is true and correct to the best of my knowledge.</label> 
+</td> 
+</tr> 
+<tr> 
+<td colspan="2" align="center"> 
+<input type="submit" value="Submit"> 
+<input type="reset" value="Reset"> 
+<input type="button" value="Cancel"> 
+</td> 
+</tr> 
+</table> 
+</form> 
+</body> 
+</html> 
